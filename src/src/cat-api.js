@@ -1,6 +1,3 @@
-// export fetchCatByBreed(breedId);
-
-// export fetchBreeds();
 import axios from 'axios';
 import Notiflix from 'notiflix';
 import SlimSelect from 'slim-select';
@@ -25,7 +22,6 @@ export async function fetchBreeds(selectEl, loadingEl, errorEl, titleEl) {
     loadingEl.style.display = 'none';
     selectEl.style.display = 'none';
     titleEl.style.display = 'none';
-    // errorEl.style.display = 'block'; // Раскоментировать для вывода текстового контента об ошибке на страницу.
 
     Notiflix.Notify.failure(
       'Oops! Something went wrong! Try reloading the page!'
