@@ -1,1 +1,3 @@
-fetchCatByBreed(breedId);
+export fetchCatByBreed(breedId);
+
+export fetchBreeds();
