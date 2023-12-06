@@ -9,8 +9,8 @@ import './css/stylle.css';
 // const loaderAnime = document.querySelector('.loader');
 // const body = document.querySelector('body');
 
-import { fetchBreeds } from './cat-api.js';
-import { fetchCatByBreed } from './cat-api.js';
+// import { fetchBreeds } from './cat-api.js';
+// import { fetchCatByBreed } from './cat-api.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const breeds = await fetchBreeds();
