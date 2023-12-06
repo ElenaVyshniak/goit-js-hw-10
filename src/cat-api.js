@@ -1,27 +1,44 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 // axios.defaults.headers.common['x-api-key'] =
 //   'live_n2ND2q7UjmqCtzYqN0M9RY9AeEzLxLRhEVGqjnzVrmKV3FgoycYwhhnphz2KTV3x';
+const url = 'https://api.thecatapi.com/v1/breeds';
+const api_key =
+  'live_n2ND2q7UjmqCtzYqN0M9RY9AeEzLxLRhEVGqjnzVrmKV3FgoycYwhhnphz2KTV3x';
 
-const API_KEY =
-  'live_V8HYuwQGHrCRuDbKWADV94hb3cIE0fKwbJIkP3ilFvA8HvXoQWdO7ytqkZcSG1Wg';
-const BREED_URL = 'https://api.thecatapi.com/v1/breeds?api_key';
-const IMG_URL = 'https://api.thecatapi.com/v1/images/search?api_key';
+export function fetchBreeds() {
+  const apiUrl = 'https://api.thecatapi.com/v1/breeds';
 
-export const fetchBreeds = () => {
-  return fetch(`${BREED_URL}=${API_KEY}`).then(response => {
-    if (!response.ok) {
-      throw new Error(response.statusText);
-    }
-    return response.json();
-  });
-};
+  return fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(
+          `Failed to fetch breeds. Status: ${response.status} - ${response.statusText}`
+        );
+      }
+      return response.json();
+    })
+    .then(breeds => {
+      return breeds.map(breed => ({
+        id: breed.id,
+        name: breed.name,
+      }));
+    });
+}
 
-export const fetchCatByBreed = breedId => {
-  return fetch(`${IMG_URL}=${API_KEY}&breed_ids=${breedId}`).then(response => {
-    if (!response.ok) {
-      throw new Error(response.statusText);
-    }
-    return response.json();
-  });
-};
+// export function fetchCatByBreed(breedId) {
+//   const apiUrl = `https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}`;
+
+//   return fetch(apiUrl)
+//     .then(response => {
+//       if (!response.ok) {
+//         throw new Error(
+//           `Failed to fetch cat by breed. Status: ${response.status} - ${response.statusText}`
+//         );
+//       }
+//       return response.json();
+//     })
+//     .then(catData => {
+//              return catData[0];
+//     });
+// }
