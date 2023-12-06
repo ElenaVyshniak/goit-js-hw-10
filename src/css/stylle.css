@@ -81,25 +81,25 @@ p {
 .loader:before {
   width: 100%;
   padding-bottom: 100%;
-  box-shadow: inset 0 0 0 1rem #fff;
+  box-shadow: inset 0 0 0 1rem #281010;
   animation-name: pulsIn;
 }
 
 .loader:after {
   width: calc(100% - 2rem);
   padding-bottom: calc(100% - 2rem);
-  box-shadow: 0 0 0 0 #fff;
+  box-shadow: 0 0 0 0 #eb1b1b;
 }
 
 @keyframes pulsIn {
   0% {
-    box-shadow: inset 0 0 0 1rem #fff;
+    box-shadow: inset 0 0 0 1rem #452a2a;
     opacity: 1;
   }
 
   50%,
   100% {
-    box-shadow: inset 0 0 0 0 #fff;
+    box-shadow: inset 0 0 0 0 #ffffff;
     opacity: 0;
   }
 }
@@ -107,12 +107,12 @@ p {
 @keyframes pulsOut {
   0%,
   50% {
-    box-shadow: 0 0 0 0 #fff;
+    box-shadow: 0 0 0 0 hsl(0, 91%, 23%);
     opacity: 0;
   }
 
   100% {
-    box-shadow: 0 0 0 1rem #fff;
+    box-shadow: 0 0 0 1rem #ae6464;
     opacity: 1;
   }
 }
