@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-// axios.defaults.headers.common['x-api-key'] =
-//   'live_n2ND2q7UjmqCtzYqN0M9RY9AeEzLxLRhEVGqjnzVrmKV3FgoycYwhhnphz2KTV3x';
-const url = 'https://api.thecatapi.com/v1/breeds';
-const api_key =
+axios.defaults.headers.common['x-api-key'] =
   'live_n2ND2q7UjmqCtzYqN0M9RY9AeEzLxLRhEVGqjnzVrmKV3FgoycYwhhnphz2KTV3x';
+const url = 'https://api.thecatapi.com/v1/breeds';
+// const api_key =
+//   'live_n2ND2q7UjmqCtzYqN0M9RY9AeEzLxLRhEVGqjnzVrmKV3FgoycYwhhnphz2KTV3x';
 
 // export function fetchBreeds() {
 //   const apiUrl = 'https://api.thecatapi.com/v1/breeds';
