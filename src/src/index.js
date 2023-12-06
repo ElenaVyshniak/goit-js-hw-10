@@ -1,4 +1,4 @@
-import { fetchBreeds, fetchCatByBreed } from '.servise/cat-api';
+import { fetchBreeds, fetchCatByBreed } from './cat-api';
 import { TheCatAPI } from '@thatapicompany/thecatapi';
 import axios from 'axios';
 
