@@ -23,6 +23,6 @@ export async function fetchBreeds() {
     }));
   } catch (error) {
     console.error('Error fetching breeds:', error);
-    throw error;
+    throw error; // Re-throw the error to let the caller handle it
   }
 }
