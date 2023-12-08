@@ -25,20 +25,3 @@ export function fetchBreeds() {
       }));
     });
 }
-
-// export function fetchCatByBreed(breedId) {
-//   const apiUrl = `https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}`;
-
-//   return fetch(apiUrl)
-//     .then(response => {
-//       if (!response.ok) {
-//         throw new Error(
-//           `Failed to fetch cat by breed. Status: ${response.status} - ${response.statusText}`
-//         );
-//       }
-//       return response.json();
-//     })
-//     .then(catData => {
-//       return catData[0];
-//     });
-// }
