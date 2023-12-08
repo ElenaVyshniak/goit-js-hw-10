@@ -13,15 +13,6 @@ const loader = document.querySelector('.loader');
 const error = document.querySelector('.error');
 const div = document.querySelector('.cat-info');
 
-function setLoadingState(isLoading) {
-  loader.style.display = isLoading ? 'block' : 'none';
-}
-
-function setErrorState(hasError) {
-  error.style.display = hasError ? 'block' : 'none';
-  select.style.display = hasError ? 'none' : 'block';
-}
-
 // document.addEventListener('DOMContentLoaded', async () => {
 //   const breeds = await fetchBreeds();
 //   const breedSelect = document.getElementById('breedSelect');
