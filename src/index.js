@@ -39,7 +39,7 @@ function onSelect(event) {
       catMarkup(data);
     })
     .catch(() => {
-      select.classList.add('is-hidden');
+      // select.classList.add('is-hidden');
       Notify.failure(' Oops! Something went wrong! Try reloading the page!');
     })
     .finally(() => loader.classList.add('is-hidden'));
